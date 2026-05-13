@@ -1,18 +1,12 @@
 import numpy as np 
+import scripts
+#players = int(input("How many players are you playing with? (2-3): "))
 
-player_count = int(input("How many players are you playing with? (1-3): "))
+scripts.turn()    
 
 
 
-dice_array = np.array ([1, 2, 3, 4, 5, 6])
-
-dice_rolls = np.random.choice(dice_array, size = 3, replace = True)
-
-print("Rolls:", dice_rolls)
-
-#Checks for tuple out
-if dice_rolls [0] == dice_rolls [1] == dice_rolls [2]:
-    print("Tuple out")
+    
 #dice scenarios
 elif dice_rolls[0] == dice_rolls [1]:
     print ("Dice 1 and Dice 2 are fixed, would you like to roll dice 3 again? (y/n): ")
