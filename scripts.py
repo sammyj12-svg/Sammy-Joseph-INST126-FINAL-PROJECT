@@ -37,7 +37,8 @@ def turn():
         else: 
             again = input("No matching dice, would you like to roll again? (y/n): ")
             if again == "y":
-                continue_turn
+                dice = roll_dice()
+                print("Start roll:", dice)
         if again == "n":
             continue_turn = False
             print (sum(dice))
