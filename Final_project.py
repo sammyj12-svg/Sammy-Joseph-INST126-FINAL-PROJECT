@@ -5,14 +5,19 @@ player1_score = 0
 player2_score = 0
 
 while True:
-    win_condition = int(input("What score do you want to play to? (30-50)"))
-    if win_condition != int:
+    try:
+        win_condition = int(input("What score do you want to play to? (30-50)"))
+
+        if win_condition > 50 or win_condition < 30:
+            print("Please enter a number between (30-50)")
+        
+        else: 
+            break
+
+    except ValueError: 
         print ("Please enter a numer")
-        continue
-    if win_condition > 50 or win_condition < 30:
-        print("Please enter a number between (30-50)")
-    else: 
-        break
+
+    
 
 while player1_score < 50 and player2_score < 50:
     print ("Player 1 turn:")
