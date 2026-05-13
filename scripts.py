@@ -2,6 +2,7 @@ import numpy as np
 def roll_dice():
     dice_array = np.array ([1, 2, 3, 4, 5, 6])
     np.random.choice(dice_array, size = 3, replace = True)
+    return np.random.choice(dice_array, size = 3, replace = True)
 
 
 
