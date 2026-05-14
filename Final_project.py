@@ -18,7 +18,7 @@ while True:
             break
     # Catches an error if the user enters something that is not a number
     except ValueError: 
-        print ("Please enter a numer")
+        print ("Please enter a number")
 
     
 #Game loop 
@@ -33,7 +33,7 @@ while player1_score < win_condition and player2_score < win_condition:
     print("Player 1's current score is:", player1_score)
     
     #win_condition for player 1
-    if player1_score >= win_condition:
+    if player1_score >= win_condition: 
         print("game over, player 1 wins!!!")
 
     #Player 2 turn: 
