@@ -1,7 +1,5 @@
 #Imports numpy and seperate module 
-import numpy as np 
 import scripts
-import os
 #Assigns players scores at beginning of game
 player1_score = 0
 player2_score = 0
@@ -36,6 +34,7 @@ while player1_score < win_condition and player2_score < win_condition:
     #win_condition for player 1
     if player1_score >= win_condition: 
         print("game over, player 1 wins!!!")
+        break
 
     #Player 2 turn: 
     print ("Player 2 turn:")
@@ -48,8 +47,13 @@ while player1_score < win_condition and player2_score < win_condition:
     #win_condition for player 2
     if player2_score >= win_condition: 
         print("game over, player 2 wins!!!")
-    with open("Tuple_scores.txt", mode="a") as write_connection:
-        write_connection.write(f"Player 1: {player1_score}, Player 2: {player2_score}\n")
+        break
+
+with open("Tuple_scores.txt", mode="a") as write_connection:
+    write_connection.write(f"Player 1: {player1_score}, Player 2: {player2_score}\n")
+    
+with open("Tuple_scores.txt", "r") as read_connection:
+    print(read_connection.read())
 
 
 
