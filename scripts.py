@@ -37,19 +37,19 @@ def turn():
         #fixed dice scenarios
         if dice[0] == dice [1]:
             again = input ("Dice 1 and Dice 2 are fixed, would you like to roll dice 3 again? (y/n): ")
-            if again == "y"
+            if again == "y":
                 dice[2] = np.random.randint(1,7)
                 print(dice[0], dice[1], dice[2])
     
         elif dice[1] == dice [2]:
             again = input ("Dice 2 and Dice 3 are fixed would you like to roll dice 1 again? (y/n): ")
-            if again == "y"
+            if again == "y":
                 dice[0] = np.random.randint(1,7)
                 print(dice[0], dice[1], dice[2])
 
         elif dice[0] == dice [2]:
             again = input ("Dice 1 and Dice 3 are fixed, would you like to roll dice 2 again? (y/n): ")
-            if again == "y"
+            if again == "y":
                 dice[1] = np.random.randint(1,7)
                 print(dice[0], dice[1], dice[2])
         

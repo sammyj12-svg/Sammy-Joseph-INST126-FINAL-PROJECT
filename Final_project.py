@@ -9,10 +9,10 @@ while True:
 
     try:
         #Asks the user what score they want to play to and allows the user to enter only an integer
-        win_condition = int(input("What score do you want to play to? (30-50)"))
+        win_condition = int(input("What score do you want to play to? (20-50)"))
         #Makes sure the user enters a number within the range
-        if win_condition > 50 or win_condition < 30:
-            print("Please enter a numbe between (30-50)")
+        if win_condition > 50 or win_condition < 20:
+            print("Please enter a number between (20-50)")
         #Breaks out of the parameters loop once win_condition is entered
         else: 
             break
@@ -22,7 +22,7 @@ while True:
 
     
 #Game loop 
-while player1_score < 50 and player2_score < 50:
+while player1_score < win_condition and player2_score < win_condition:
    
     #Player 1 turn: 
     print ("Player 1 turn:")
@@ -33,7 +33,7 @@ while player1_score < 50 and player2_score < 50:
     print("Player 1's current score is:", player1_score)
     
     #win_condition for player 1
-    if player1_score >= 50:
+    if player1_score >= win_condition:
         print("game over, player 1 wins!!!")
 
     #Player 2 turn: 
@@ -45,7 +45,7 @@ while player1_score < 50 and player2_score < 50:
     print("Player 2's current score is:", player2_score)
 
     #win_condition for player 2
-    if player2_score >= 50: 
+    if player2_score >= win_condition: 
         print("game over, player 2 wins!!!")
 
 
