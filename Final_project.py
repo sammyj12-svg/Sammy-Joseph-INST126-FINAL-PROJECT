@@ -49,8 +49,17 @@ while player1_score < win_condition and player2_score < win_condition:
         print("game over, player 2 wins!!!")
         break
 
+players = [player1_score, player2_score]
+scores = {"Player 1": player1_score, 
+          "Player 2": player2_score
+}
+
 with open("Tuple_scores.txt", mode="a") as write_connection:
+    write_connection.write("Game Result:\n")
     write_connection.write(f"Player 1: {player1_score}, Player 2: {player2_score}\n")
+
+    write_connection.write(f"List format: {players}\n")
+    write_connection.write(f"Dictionary format: {scores}\n")
     
 with open("Tuple_scores.txt", "r") as read_connection:
     print(read_connection.read())
