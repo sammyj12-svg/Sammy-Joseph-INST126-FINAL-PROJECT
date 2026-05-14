@@ -12,7 +12,7 @@ while True:
         win_condition = int(input("What score do you want to play to? (30-50)"))
         #Makes sure the user enters a number within the range
         if win_condition > 50 or win_condition < 30:
-            print("Please enter a number between (30-50)")
+            print("Please enter a numbe between (30-50)")
         #Breaks out of the parameters loop once win_condition is entered
         else: 
             break
