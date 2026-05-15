@@ -1,4 +1,4 @@
-#Imports numpy and seperate module 
+#Imports seperate module 
 import scripts
 #Assigns players scores at beginning of game
 player1_score = 0
@@ -55,13 +55,16 @@ scores = {"Player 1": player1_score,
 }
 
 with open("Tuple_scores.txt", mode="a") as write_connection:
+    write_connection.write("\n-----------------\n")
     write_connection.write("Game Result:\n")
     write_connection.write(f"Player 1: {player1_score}, Player 2: {player2_score}\n")
 
     write_connection.write(f"List format: {players}\n")
     write_connection.write(f"Dictionary format: {scores}\n")
+    write_connection.write("-----------------")
+
     
-with open("Tuple_scores.txt", "r") as read_connection:
+with open("Tuple_scores.txt", mode="r") as read_connection:
     print(read_connection.read())
 
 
