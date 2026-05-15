@@ -54,6 +54,11 @@ scores = {"Player 1": player1_score,
           "Player 2": player2_score
 }
 
+player_scores = []
+
+for player in players: 
+    player_scores.append(player)
+
 with open("Tuple_scores.txt", mode="a") as write_connection:
     write_connection.write("\n-----------------\n")
     write_connection.write("Game Result:\n")
